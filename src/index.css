@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0A192F;    /* Navy Blue */
+    --color-secondary: #D4AF37;  /* Gold */
+    --color-accent: #DC2626;     /* Red */
+  }
+
+  body {
+    @apply bg-[var(--color-primary)] text-white;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10;
+  }
+
+  .nav-link {
+    @apply cursor-pointer hover:text-[var(--color-secondary)] transition-colors duration-300;
+  }
+
+  .skill-bar {
+    @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+  }
+
+  .skill-progress {
+    @apply h-full bg-[var(--color-secondary)] transition-all duration-1000;
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-[var(--color-secondary)] last:border-l-0;
+  }
+
+  .timeline-dot {
+    @apply absolute -left-[9px] w-4 h-4 bg-[var(--color-secondary)] rounded-full;
+  }
+}
